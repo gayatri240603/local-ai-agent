@@ -133,6 +133,6 @@ This is an **experimental project** built for learning and internship preparatio
 
 
 
-## ⭐ If you found this useful
+##  If you found this useful
 
-Give it a star ⭐ on GitHub!
+Give it a star  on GitHub!
