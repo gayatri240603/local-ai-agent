@@ -19,7 +19,8 @@ This is a local AI project built using:
 ```bash
 pip install -r requirements.txt
 python main.py
-Future Improvements
+
+## Future Improvements
 Better model (Llama3 / Mistral)
 Improved retrieval filtering
 Web search integration
