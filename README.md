@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #  Local AI Agent (RAG with Ollama)
 
 A lightweight **offline AI system** that answers questions using a restaurant reviews dataset. Built using **Retrieval-Augmented Generation (RAG)** with local models — no API required.
@@ -136,3 +137,5 @@ This is an **experimental project** built for learning and internship preparatio
 ##  If you found this useful
 
 Give it a star  on GitHub!
+=======
+>>>>>>> 6066d8a (Saved my work)

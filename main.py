@@ -28,9 +28,7 @@ while True:
         break
 
     # Retrieve relevant docs
-    enhanced_query = """
-    vegan pizza vegan cheese dairy-free vegetarian plant-based cashew cheese no-cheese option vegan review
-    """
+    enhanced_query = query + " restaurant review pizza taste quality"
     docs = vector_store.similarity_search(enhanced_query, k=5)
     print("Docs count:", len(docs))
     print("\n📄 Sources used:")
@@ -43,33 +41,33 @@ while True:
     ])
 
     prompt = f"""
-You are a strict restaurant review analyst.
+    You are a strict restaurant review analyst.
 
-Rules:
-- Use ONLY the given context
-- Do NOT add any new information
-- If something is not mentioned, say "Not mentioned"
-- Do NOT assume or generalize
+    Rules:
+    - Use ONLY the context
+    - Do NOT make up information
+    - If not found, say "Not mentioned"
+    - Be specific
 
-Give output in this format:
+    Format:
 
-Overall Sentiment: (positive / negative / mixed)
+    Overall Sentiment: (positive / negative / mixed)
 
-Key Points:
-- point 1
-- point 2
+    Key Points:
+    - (real point from reviews)
+    - (real point from reviews)
 
-Final Conclusion:
-- short summary based ONLY on context
+    Final Conclusion:
+    - (1-2 line summary)
 
-Context:
-{context}
+    Context:
+    {context}
 
-Question:
-{query}
+    Question:
+    {query}
 
-Answer:
-"""
+    Answer:
+    """
 
     response = llm.invoke(prompt)
 
